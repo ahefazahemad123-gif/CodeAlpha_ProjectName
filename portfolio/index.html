@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Modern Portfolio</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div><strong>MyPortfolio</strong></div>
+    <ul id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  </nav>
+</header>
+
+<main>
+  <section id="about" class="visible">
+    <h1>About Me</h1>
+    <p>Hello! my name is ahefaz and I am a passionate web developer with experience building modern, responsive websites and web apps. I enjoy working with JavaScript, CSS animations, and creating smooth user experiences.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project" tabindex="0">
+        <h3>Image Gallery</h3>
+        <p>A personal portfolio website showcasing my skills, projects, and contact info.</p>
+        <a href="http://127.0.0.1:3002/index.html" target="_blank" rel="noopener">View Project</a>
+      </div>
+      <div class="project" tabindex="0">
+        <h3>calculator</h3>
+        <p>A responsive task management web application built with React.js and Firebase.</p>
+        <a href="http://127.0.0.1:3004/index.html" target="_blank" rel="noopener">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <ul>
+      <li><strong>Web Developer</strong> </li>
+      <li><strong>Front-End Developer</strong> - CodeAlpha Intern</li>
+      <li><strong>B.Tech CSE(IOT)</strong> -  Prof. Ram Meghe Institute of Technology & Research (PRMITR)</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form" action="https://formspree.io/f/maypvlko" method="POST" target="_blank">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required placeholder="shaikh ahefaz shaikh khaleel" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="_replyto" required placeholder="ahefazahemad123@gmail.com" />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  &copy; 2024 MyPortfolio. All rights reserved.
+</footer>
+
+<script src="index.js"></script>
+
+</body>
+</html>

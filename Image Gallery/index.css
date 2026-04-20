@@ -1,0 +1,126 @@
+ /* Basic reset and style */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 20px;
+    background: #f0f0f0;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  /* Gallery container */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px; 
+  }
+  /* Gallery images */
+  .gallery img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    object-fit: cover;
+    height: 140px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(0);
+  }
+  /* Hover effect */
+  .gallery img:hover {
+    transform: scale(1.05);
+    filter: grayscale(20%);
+  }
+  /* Filter buttons */
+  .filters {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .filters button {
+    background: #ddd;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  .filters button.active,
+  .filters button:hover {
+    background: #007BFF;
+    color: white;
+  }
+  /* Lightbox overlay */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+  }
+  .lightbox.active {
+    display: flex;
+  }
+  /* Lightbox image */
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #fff;
+  }
+  /* Lightbox navigation buttons */
+  .lightbox .nav-btn {
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.3);
+    transition: background 0.3s ease;
+  }
+  .lightbox .nav-btn:hover {
+    background: rgba(0,0,0,0.7);
+  }
+  .lightbox .prev {
+    left: 20px;
+    transform: translateY(-50%);
+  }
+  .lightbox .next {
+    right: 20px;
+    transform: translateY(-50%);
+  }
+  /* Close button */
+  .lightbox .close {
+    position: absolute;
+    top: 20px; right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    background: rgba(0,0,0,0.3);
+    padding: 5px 10px;
+    border-radius: 5px;
+    user-select: none;
+    transition: background 0.3s ease;
+  }
+  .lightbox .close:hover {
+    background: rgba(0,0,0,0.7);
+  }
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    .gallery img {
+      height: 110px;
+    }
+    .filters button {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  }
